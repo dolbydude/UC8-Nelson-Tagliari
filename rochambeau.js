@@ -24,16 +24,16 @@ function playGame() {
     } else if (playerChoice == 2 && computerChoice == 1 || computerChoice == 3) {
         // Scissors beats paper and lizard - a win!
         console.log("win");
-        else if (playChoice == 3 && computerChoice == 1 || computerChoice == 4){
+         return 1;
+    } else if (playChoice == 3 && computerChoice == 1 || computerChoice == 4){
             //Lizard beats paper and spock - a win!
             console.log("win");
-        }
-        else if (playerChoice == 4 && computerChoice == 0 || computerChoice == 2){
+         return 1;
+    } else if (playerChoice == 4 && computerChoice == 0 || computerChoice == 2){
             //Spock beats rock and scissors - a win!
             console.log("win");
-        }
-                return 1;
-    } else {
+         return 1;
+        } else {
         // All other combinations are losses
         console.log("lose");
         return -1;
