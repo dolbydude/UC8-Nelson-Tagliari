@@ -13,16 +13,24 @@ function playGame(){
         // We have a tie!
         console.log("tie");
         return 0;
-    } else if (playerChoice == 0 && computerChoice == 2) {
+    } else if (playerChoice == 0 && computerChoice == 2 || computerChoice == 3) {
         // Rock beats scissors - a win!
         console.log("win");
         return 1;
-    } else if (playerChoice == 1 && computerChoice == 0) {
+    } else if (playerChoice == 1 && computerChoice == 0 || computerChoice == 4) {
         // Paper beats scissors - a win!
         console.log("win");
         return 1;
-    } else if (playerChoice == 2 && computerChoice == 1) {
+    } else if (playerChoice == 2 && computerChoice == 1 || computerChoice == 3) {
         // Scissors beats paper - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 3 && computerChoice == 4 || computerChoice == 1) {
+        // Lizards beats paper - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 4 && computerChoice == 0 || computerChoice == 2) {
+        // Spock beats paper - a win!
         console.log("win");
         return 1;
     } else {
@@ -44,8 +52,8 @@ function updateScore(val){
 }
 
 function displayGameResult(resultId){
-    // Define an array of text labels for the choices 0, 1, 2;
-    var choices = ["Rock", "Paper", "Scissors"];
+    // Define an array of text labels for the choices 0, 1, 2, 3, 4;
+    var choices = ["Rock", "Paper", "Scissors","Lizards","Spock"];
     // Now play the game and store the result
     var result = playGame();
     // Create a message for the player
@@ -77,6 +85,6 @@ function storePlayerChoice(choice) {
 
 function storeComputerChoice() {
     // Generate computer's random choice
-    computerChoice = Math.floor(Math.random()*3);
+    computerChoice = Math.floor(Math.random()*5);
     console.log("Computer choice = " + computerChoice);
 }
