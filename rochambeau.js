@@ -13,24 +13,44 @@ function playGame(){
         // We have a tie!
         console.log("tie");
         return 0;
-    } else if (playerChoice == 0 && computerChoice == 2 || computerChoice == 3) {
+    } else if (playerChoice == 0 && computerChoice == 2) {
         // Rock beats scissors - a win!
         console.log("win");
         return 1;
-    } else if (playerChoice == 1 && computerChoice == 0 || computerChoice == 4) {
-        // Paper beats scissors - a win!
+    } else if (playerChoice == 0 && computerChoice == 3) {
+        // Rock beats Lizards - a win!
         console.log("win");
         return 1;
-    } else if (playerChoice == 2 && computerChoice == 1 || computerChoice == 3) {
+    } else if (playerChoice == 1 && computerChoice == 0) {
+        // Paper beats rock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 1 && computerChoice == 4) {
+        // Paper beats Spock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 2 && computerChoice == 1) {
         // Scissors beats paper - a win!
         console.log("win");
         return 1;
-    } else if (playerChoice == 3 && computerChoice == 4 || computerChoice == 1) {
+    } else if (playerChoice == 2 && computerChoice == 3) {
+        // Scissors beats Lizards - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 3 && computerChoice == 4) {
+        // Lizards beats Spock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 3 && computerChoice == 1) {
         // Lizards beats paper - a win!
         console.log("win");
         return 1;
-    } else if (playerChoice == 4 && computerChoice == 0 || computerChoice == 2) {
-        // Spock beats paper - a win!
+    } else if (playerChoice == 4 && computerChoice == 0) {
+        // Spock beats rock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 4 && computerChoice == 2) {
+        // Spock beats scissors - a win!
         console.log("win");
         return 1;
     } else {
