@@ -82,41 +82,40 @@ function updateScore(val) {
 }
 
 function displayGameResult(resultId) {
-    function displayGameResult(resultId) {
-        // Define an array of text labels for the choices 0, 1, 2, 3, 4;
-        var choices = ["Rock", "Paper", "Scissors", "Lizards", "Spock"];
-        var result = playGame();
-        // Create a message for the player
-        var message = "Your choice was " + choices[playerChoice] + " and the computer's choice was " + choices[computerChoice] + "<br/>";
-        // Add to the base message if it was a win, loss, or tie
-        if (result == 1) {
-            // Display that it was a win
-            updateScore(0);
-            document.getElementById(resultId).innerHTML = message + "YOU WIN!";
-            document.getElementById(resultId).className = "alert alert-success";
-        }
-        else if (result == -1) {
-            updateScore(2);
-            // Display that it was a loss
-            document.getElementById(resultId).innerHTML = message + "YOU LOOSE! ";
-            document.getElementById(resultId).className = "alert alert-danger";
-        }
-        else {
-            // Display that it was a tie
-            updateScore(1);
-            document.getElementById(resultId).innerHTML = message + "A tie. ";
-            document.getElementById(resultId).className = "alert alert-info";
-        }
+    // Define an array of text labels for the choices 0, 1, 2, 3, 4;
+    var choices = ["Rock", "Paper", "Scissors", "Lizards", "Spock"];
+    var result = playGame();
+    // Create a message for the player
+    var message = "Your choice was " + choices[playerChoice] + " and the computer's choice was " + choices[computerChoice] + "<br/>";
+    // Add to the base message if it was a win, loss, or tie
+    if (result == 1) {
+        // Display that it was a win
+        updateScore(0);
+        document.getElementById(resultId).innerHTML = message + "YOU WIN!";
+        document.getElementById(resultId).className = "alert alert-success";
     }
+    else if (result == -1) {
+        updateScore(2);
+        // Display that it was a loss
+        document.getElementById(resultId).innerHTML = message + "YOU LOOSE! ";
+        document.getElementById(resultId).className = "alert alert-danger";
+    }
+    else {
+        // Display that it was a tie
+        updateScore(1);
+        document.getElementById(resultId).innerHTML = message + "A tie. ";
+        document.getElementById(resultId).className = "alert alert-info";
+    }
+}
 
-    function storePlayerChoice(choice) {
-        playerChoice = choice;
-        console.log("My choice = " + playerChoice);
-        storeComputerChoice();
-    }
+function storePlayerChoice(choice) {
+    playerChoice = choice;
+    console.log("My choice = " + playerChoice);
+    storeComputerChoice();
+}
 
-    function storeComputerChoice() {
-        // Generate computer's random choice
-        computerChoice = Math.floor(Math.random() * 5);
-        console.log("Computer choice = " + computerChoice);
-    }
+function storeComputerChoice() {
+    // Generate computer's random choice
+    computerChoice = Math.floor(Math.random() * 5);
+    console.log("Computer choice = " + computerChoice);
+}
