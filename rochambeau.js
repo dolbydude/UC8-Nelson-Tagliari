@@ -13,99 +13,54 @@ function playGame() {
         console.log("tie");
         return 0;
     }
-    else if (playerChoice == 0) {
-        if (computerChoice == 2 || computerChoice == 3) {
-            // Rock beats scissors and lizard - a win!
-            console.log("win");
-            return 1;
-        }
+    else if (playerChoice == 0 && computerChoice == 3) {
+        // Rock beats Lizards - a win!
+        console.log("win");
+        return 1;
     }
-    else if (playerChoice == 1) {
-        if (computerChoice == 0 || computerChoice == 4) {
-            // Paper beats rock and spock - a win!
-            console.log("win");
-            return 1;
-        }
+    else if (playerChoice == 0 && computerChoice == 2) {
+        // Rock beats scissors - a win!
+        console.log("win");
+        return 1;
     }
-    else if (playerChoice == 2) {
-        if (computerChoice == 1 || computerChoice == 3) {
-            // Scissors beats paper and lizard - a win!
-            console.log("win");
-            return 1;
-        }
+    else if (playerChoice == 1 && computerChoice == 0) {
+        // Paper beats rock - a win!
+        console.log("win");
+        return 1;
     }
-    else if (playChoice == 3) {
-        if (computerChoice == 1 || computerChoice == 4) {}
-        else if (playerChoice == 0 && computerChoice == 2 || computerChoice == 3) {
-            // Rock beats scissors and lizard - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 0 && computerChoice == 3) {
-            // Rock beats Lizards - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 1 && computerChoice == 0) {
-            // Paper beats rock - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 1 && computerChoice == 4) {
-            // Paper beats Spock - a win!
-        }
-        else if (playerChoice == 1 && computerChoice == 0 || computerChoice == 4) {
-            // Paper beats rock and spock - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 2 && computerChoice == 1 || computerChoice == 3) {
-            // Scissors beats paper and lizard - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 2 && computerChoice == 3) {
-            // Scissors beats Lizards - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 3 && computerChoice == 4) {
-            // Lizards beats Spock - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 3 && computerChoice == 1) {
-            // Lizards beats paper - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 4 && computerChoice == 0) {
-            // Spock beats rock - a win!
-            console.log("win");
-            return 1;
-        }
-        else if (playerChoice == 4 && computerChoice == 2) {
-            // Spock beats scissors - a win!
-            console.log("win");
-            return 1;
-        }
-        else {
-            return 1;
-        }
-        else if (playChoice == 3 && computerChoice == 1 || computerChoice == 4) {
-            //Lizard beats paper and spock - a win!
-            console.log("win");
-            return 1;
-        }
+    else if (playerChoice == 1 && computerChoice == 4) {
+        // Paper beats Spock - a win!
+        console.log("win");
+        return 1;
     }
-    else if (playerChoice == 4) {
-        if (computerChoice == 0 || computerChoice == 2) {
-            //Spock beats rock and scissors - a win!
-            console.log("win");
-            return 1;
-        }
+    else if (playerChoice == 2 && computerChoice == 3) {
+        // Scissors beats Lizards - a win!
+        console.log("win");
+        return 1;
     }
-    else {
+    else if (playerChoice == 2 && computerChoice == 1) {
+        // Scissors beats paper - a win!
+        console.log("win");
+        return 1;
+    }
+    else if (playerChoice == 3 && computerChoice == 4) {
+        // Lizards beats Spock - a win!
+        console.log("win");
+        return 1;
+    }
+    else if (playerChoice == 3 && computerChoice == 1) {
+        // Lizards beats paper - a win!
+        console.log("win");
+        return 1;
+    }
+    else if (playerChoice == 4 && computerChoice == 0) {
+        // Spock beats rock - a win!
+        console.log("win");
+        return 1;
+    }
+    else if (playerChoice == 4 && computerChoice == 2) {
+        // Spock beats scissors - a win!
+        console.log("win");
         return 1;
     }
     else {
