@@ -12,7 +12,6 @@ function playGame() {
         // We have a tie!
         console.log("tie");
         return 0;
-<<<<<<< HEAD
     }
     else if (playerChoice == 0) {
         if (computerChoice == 2 || computerChoice == 3) {
@@ -36,59 +35,64 @@ function playGame() {
         }
     }
     else if (playChoice == 3) {
-        if (computerChoice == 1 || computerChoice == 4) {
-=======
-    } else if (playerChoice == 0 && computerChoice == 2 || computerChoice == 3) {
-        // Rock beats scissors and lizard - a win!
-        console.log("win");
-        return 1;
-<<<<<<< HEAD
-    } else if (playerChoice == 0 && computerChoice == 3) {
-        // Rock beats Lizards - a win!
-        console.log("win");
-        return 1;
-    } else if (playerChoice == 1 && computerChoice == 0) {
-        // Paper beats rock - a win!
-        console.log("win");
-        return 1;
-    } else if (playerChoice == 1 && computerChoice == 4) {
-        // Paper beats Spock - a win!
-=======
-    } else if (playerChoice == 1 && computerChoice == 0 || computerChoice == 4) {
-        // Paper beats rock and spock - a win!
->>>>>>> origin/master
-        console.log("win");
-        return 1;
-    } else if (playerChoice == 2 && computerChoice == 1 || computerChoice == 3) {
-        // Scissors beats paper and lizard - a win!
-        console.log("win");
-<<<<<<< HEAD
-        return 1;
-    } else if (playerChoice == 2 && computerChoice == 3) {
-        // Scissors beats Lizards - a win!
-        console.log("win");
-        return 1;
-    } else if (playerChoice == 3 && computerChoice == 4) {
-        // Lizards beats Spock - a win!
-        console.log("win");
-        return 1;
-    } else if (playerChoice == 3 && computerChoice == 1) {
-        // Lizards beats paper - a win!
-        console.log("win");
-        return 1;
-    } else if (playerChoice == 4 && computerChoice == 0) {
-        // Spock beats rock - a win!
-        console.log("win");
-        return 1;
-    } else if (playerChoice == 4 && computerChoice == 2) {
-        // Spock beats scissors - a win!
-        console.log("win");
-        return 1;
-    } else {
-=======
-         return 1;
-    } else if (playChoice == 3 && computerChoice == 1 || computerChoice == 4){
->>>>>>> origin/master
+        if (computerChoice == 1 || computerChoice == 4) {}
+        else if (playerChoice == 0 && computerChoice == 2 || computerChoice == 3) {
+            // Rock beats scissors and lizard - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 0 && computerChoice == 3) {
+            // Rock beats Lizards - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 1 && computerChoice == 0) {
+            // Paper beats rock - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 1 && computerChoice == 4) {
+            // Paper beats Spock - a win!
+        }
+        else if (playerChoice == 1 && computerChoice == 0 || computerChoice == 4) {
+            // Paper beats rock and spock - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 2 && computerChoice == 1 || computerChoice == 3) {
+            // Scissors beats paper and lizard - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 2 && computerChoice == 3) {
+            // Scissors beats Lizards - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 3 && computerChoice == 4) {
+            // Lizards beats Spock - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 3 && computerChoice == 1) {
+            // Lizards beats paper - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 4 && computerChoice == 0) {
+            // Spock beats rock - a win!
+            console.log("win");
+            return 1;
+        }
+        else if (playerChoice == 4 && computerChoice == 2) {
+            // Spock beats scissors - a win!
+            console.log("win");
+            return 1;
+        }
+        else {
+            return 1;
+        }
+        else if (playChoice == 3 && computerChoice == 1 || computerChoice == 4) {
             //Lizard beats paper and spock - a win!
             console.log("win");
             return 1;
@@ -98,16 +102,13 @@ function playGame() {
         if (computerChoice == 0 || computerChoice == 2) {
             //Spock beats rock and scissors - a win!
             console.log("win");
-<<<<<<< HEAD
             return 1;
         }
     }
     else {
-=======
-         return 1;
-        } else {
->>>>>>> origin/master
->>>>>>> origin/master
+        return 1;
+    }
+    else {
         // All other combinations are losses
         console.log("lose");
         return -1;
@@ -125,51 +126,45 @@ function updateScore(val) {
     console.log("The score is now " + score);
 }
 
-<<<<<<< HEAD
 function displayGameResult(resultId) {
-=======
-function displayGameResult(resultId){
-<<<<<<< HEAD
-    // Define an array of text labels for the choices 0, 1, 2, 3, 4;
-    var choices = ["Rock", "Paper", "Scissors","Lizards","Spock"];
-=======
->>>>>>> origin/master
-    // Define an array of text labels for the choices 0, 1, 2;
-    var choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
->>>>>>> origin/master
-    // Now play the game and store the result
-    var result = playGame();
-    // Create a message for the player
-    var message = "Your choice was " + choices[playerChoice] + " and the computer's choice was " + choices[computerChoice] + "<br/>";
-    // Add to the base message if it was a win, loss, or tie
-    if (result == 1) {
-        // Display that it was a win
-        updateScore(0);
-        document.getElementById(resultId).innerHTML = message + "YOU WIN!";
-        document.getElementById(resultId).className = "alert alert-success";
+    function displayGameResult(resultId) {
+        // Define an array of text labels for the choices 0, 1, 2, 3, 4;
+        var choices = ["Rock", "Paper", "Scissors", "Lizards", "Spock"];
+        // Define an array of text labels for the choices 0, 1, 2;
+        var choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]; >>> >>> > origin / master
+            // Now play the game and store the result
+        var result = playGame();
+        // Create a message for the player
+        var message = "Your choice was " + choices[playerChoice] + " and the computer's choice was " + choices[computerChoice] + "<br/>";
+        // Add to the base message if it was a win, loss, or tie
+        if (result == 1) {
+            // Display that it was a win
+            updateScore(0);
+            document.getElementById(resultId).innerHTML = message + "YOU WIN!";
+            document.getElementById(resultId).className = "alert alert-success";
+        }
+        else if (result == -1) {
+            updateScore(2);
+            // Display that it was a loss
+            document.getElementById(resultId).innerHTML = message + "YOU LOOSE! ";
+            document.getElementById(resultId).className = "alert alert-danger";
+        }
+        else {
+            // Display that it was a tie
+            updateScore(1);
+            document.getElementById(resultId).innerHTML = message + "A tie. ";
+            document.getElementById(resultId).className = "alert alert-info";
+        }
     }
-    else if (result == -1) {
-        updateScore(2);
-        // Display that it was a loss
-        document.getElementById(resultId).innerHTML = message + "YOU LOOSE! ";
-        document.getElementById(resultId).className = "alert alert-danger";
-    }
-    else {
-        // Display that it was a tie
-        updateScore(1);
-        document.getElementById(resultId).innerHTML = message + "A tie. ";
-        document.getElementById(resultId).className = "alert alert-info";
-    }
-}
 
-function storePlayerChoice(choice) {
-    playerChoice = choice;
-    console.log("My choice = " + playerChoice);
-    storeComputerChoice();
-}
+    function storePlayerChoice(choice) {
+        playerChoice = choice;
+        console.log("My choice = " + playerChoice);
+        storeComputerChoice();
+    }
 
-function storeComputerChoice() {
-    // Generate computer's random choice
-    computerChoice = Math.floor(Math.random() * 5);
-    console.log("Computer choice = " + computerChoice);
-}
+    function storeComputerChoice() {
+        // Generate computer's random choice
+        computerChoice = Math.floor(Math.random() * 5);
+        console.log("Computer choice = " + computerChoice);
+    }
